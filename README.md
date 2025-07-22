@@ -1,4 +1,4 @@
-# Turing Machine: 0^k1^k2^k (k ≥ 0)
+# Turing Machine: $0^k 1^k 2^k \quad (k \geq 0)$
 
 This project implements two Turing Machines in Python to recognize strings of the form:
 
