@@ -13,7 +13,7 @@ class ThreeTapeTuringMachine():
         try:
             self.prepare_tapes(input_string)
             self.write_numbers_on_other_tapes()
-            self.go_back_all_tapes()
+            self.go_back_tape_two_and_three()
             self.verify_if_tapes_are_the_same_size()
         except Accept:
             return True
@@ -62,7 +62,7 @@ class ThreeTapeTuringMachine():
         if self.tape_1.current() != TWO:
             raise Reject()
 
-    def go_back_all_tapes(self):
+    def go_back_tape_two_and_three(self):
         self.tape_2.go_left()
         self.tape_3.go_left()
         self.steps_counter += 2

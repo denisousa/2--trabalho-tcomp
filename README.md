@@ -5,8 +5,8 @@ This project implements two Turing Machines in Python to recognize strings of th
 **L = { 0^k 1^k 2^k | k ≥ 0 }**
 
 Examples:
-- Valid: `""`, `"012"`, `"001122"`, `"000111222"`
-- Invalid: `"00112"`, `"0112"`, `"000111"`
+- ACCEPT: `""`, `"012"`, `"001122"`, `"000111222"`
+- REJECT: `"00112"`, `"0112"`, `"000111"`
 
 ## Files
 - `main.py`: Entry point and logic to execute the two machines
@@ -22,6 +22,17 @@ Examples:
 - No external libraries
 
 ## Usage
+
+### Visualization Flags
+To assist in debugging or understanding the Turing Machine’s operation, you can enable step-by-step printing by configuring the following control variables in global_variables.py:
+
+```python
+SHOW_STEPS = True    # Shows tape after each cursor move (left/right)
+SHOW_WRITE = True    # Shows tape after each write operation
+SHOW_PREPARE = True  # Shows initial state of the tape during preparation
+```
+
+### Execute
 
 Run with a user input:
 
