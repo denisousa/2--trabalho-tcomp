@@ -1,4 +1,5 @@
 # Turing Machine: $0^k 1^k 2^k \quad (k \geq 0)$
+## Practical work of the discipline "Fundamentos Teóricos da Computação" - 2025.1
 
 This project implements two Turing Machines in Python to recognize strings of the form:
 
