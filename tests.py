@@ -1,4 +1,4 @@
-from execution import execute_machines_with_input
+from main import execute_machines_with_input
 
 tests = [
     ("", True),
@@ -43,8 +43,10 @@ tests = [
 ]
 
 for input_str, expected in tests:
+    print("\n"+ "*" * 40)
     result = execute_machines_with_input(input_str)
     if result[0] != expected:
         raise Exception(f"Result: {result[0]}\Expected: {result[1]}")
     
     print(f"Input: {input_str}, expected: {expected}, got: {result[0]}")
+    print("*" * 40)

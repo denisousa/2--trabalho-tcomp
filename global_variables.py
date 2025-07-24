@@ -5,4 +5,6 @@ X = 'X'
 Y = 'Y'
 Z = 'Z'
 BLANK = 'B'
-NUMBER_OF_BLANKS_AFTER = 3
+SHOW_STEPS = True
+SHOW_WRITE = False
+SHOW_PREPARE = True

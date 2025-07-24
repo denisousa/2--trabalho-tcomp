@@ -5,11 +5,11 @@ from tape import Tape
 class ThreeTapeTuringMachine():
     def __init__(self):
         super().__init__()
-        self.tape_1 = Tape()
-        self.tape_2 = Tape()
-        self.tape_3 = Tape()
+        self.tape_1 = Tape("one")
+        self.tape_2 = Tape("two")
+        self.tape_3 = Tape("three")
 
-    def test_string(self, input_string):
+    def read(self, input_string):
         try:
             self.prepare_tapes(input_string)
             self.write_numbers_on_other_tapes()
@@ -44,11 +44,9 @@ class ThreeTapeTuringMachine():
         while self.tape_1.current() == ZERO:
             self.tape_2.write(ZERO)
             self.tape_2.go_right()
-
-            self.tape_1.write(BLANK)
             self.tape_1.go_right()
 
-            self.steps_counter += 4
+            self.steps_counter += 3
 
         if self.tape_1.current() != ONE:
             raise Reject()
@@ -57,11 +55,9 @@ class ThreeTapeTuringMachine():
         while self.tape_1.current() == ONE:
             self.tape_3.write(ONE)
             self.tape_3.go_right()
-
-            self.tape_1.write(BLANK)
             self.tape_1.go_right()
 
-            self.steps_counter += 4
+            self.steps_counter += 3
 
         if self.tape_1.current() != TWO:
             raise Reject()
