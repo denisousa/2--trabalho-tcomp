@@ -45,8 +45,8 @@ def main():
     Now write a example:
     """
     
-    # user_input = input(description)
-    user_input = "000111222"
+    # user_input = "000111222"
+    user_input = input(description)
     execute_machines_with_input(user_input)
 
 if __name__ == "__main__":
